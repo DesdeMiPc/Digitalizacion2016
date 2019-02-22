@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65611B08-B492-4AE5-AEBA-1B2F65E5268B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Digitalizacion2014</RootNamespace>
+    <AssemblyName>Digitalizacion2014</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>H:\Digitalizacion2016\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>Digitalización 2016</ProductName>
+    <PublisherName>Innova Web</PublisherName>
+    <SuiteName>Digitalización</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Scanner.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Digitalizacion2014.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5B29B5DA7B6D198FC8A76017A901FFD183760E74</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Digitalizacion2014_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Chart, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Design6, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Document, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer6, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports6, Version=6.3.4797.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NTwain">
+      <HintPath>..\NTwain.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\PDFSharp and MigraDoc 1.5\PDFsharp\src\PdfSharp\bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\clsBase.cs" />
+    <Compile Include="Clases\clsBusquedas.cs" />
+    <Compile Include="Clases\clsCadenas.cs" />
+    <Compile Include="Clases\clsCampo.cs" />
+    <Compile Include="Clases\clsCampoDato.cs" />
+    <Compile Include="Clases\clsCampoTabla.cs" />
+    <Compile Include="Clases\clsClasificacionCampos.cs" />
+    <Compile Include="Clases\clsConfiguracion.cs" />
+    <Compile Include="Clases\ClsDatosComunesRegistro.cs" />
+    <Compile Include="Clases\clsEnums.cs" />
+    <Compile Include="Clases\clsExpediente.cs" />
+    <Compile Include="Clases\clsFormularioCampo.cs" />
+    <Compile Include="Clases\clsFormulario.cs" />
+    <Compile Include="Clases\clsGrupo.cs" />
+    <Compile Include="Clases\clsNodoCarpeta.cs" />
+    <Compile Include="Clases\clsNodoExpediente.cs" />
+    <Compile Include="Clases\clsNodoTiny.cs" />
+    <Compile Include="Clases\clsPDFExport.cs" />
+    <Compile Include="Clases\clsScanner.cs" />
+    <Compile Include="Clases\clsSeguridad.cs" />
+    <Compile Include="Clases\clsTipoCampo.cs" />
+    <Compile Include="Clases\clsTipoCampos.cs" />
+    <Compile Include="Clases\clsUsuario.cs" />
+    <Compile Include="Clases\clsWS.cs" />
+    <Compile Include="Clases\ColumnSorter.cs" />
+    <Compile Include="Clases\ComboBoxItem.cs" />
+    <Compile Include="Clases\clsDocumento.cs" />
+    <Compile Include="Clases\GDIDraw.cs" />
+    <Compile Include="Clases\IclsNodo.cs" />
+    <Compile Include="Clases\ShadowDrawing.cs" />
+    <Compile Include="Clases\vGlobales.cs" />
+    <Compile Include="Controles\frmBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\frmBusqueda.Designer.cs">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\frmGauge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\frmGauge.Designer.cs">
+      <DependentUpon>frmGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\InnovaTXT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\InnovaTXT.Designer.cs">
+      <DependentUpon>InnovaTXT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\jpgViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\jpgViewer.Designer.cs">
+      <DependentUpon>jpgViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\jpgViewerCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\jpgViewerCtl.Designer.cs">
+      <DependentUpon>jpgViewerCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\PageViewer.Designer.cs">
+      <DependentUpon>PageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ThumbnailList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ThumbnailList.Designer.cs">
+      <DependentUpon>ThumbnailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBases\frmCatalogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBases\frmCatalogos.Designer.cs">
+      <DependentUpon>frmCatalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBases\frmGeneral01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBases\frmGeneral01.Designer.cs">
+      <DependentUpon>frmGeneral01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gma\UserActivityMonitor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IErrorOutput.cs" />
+    <Compile Include="ImportExport\Images\ImageFileNamer.cs" />
+    <Compile Include="ImportExport\Images\ImageSaver.cs" />
+    <Compile Include="Mantenimientos\frmAgregarCampo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAgregarCampo.Designer.cs">
+      <DependentUpon>frmAgregarCampo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAgregarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAgregarGrupo.Designer.cs">
+      <DependentUpon>frmAgregarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAgregarNodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAgregarNodo.Designer.cs">
+      <DependentUpon>frmAgregarNodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCampoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCampoEdit.Designer.cs">
+      <DependentUpon>frmCampoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCampos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCampos.Designer.cs">
+      <DependentUpon>frmCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposClasificacion.Designer.cs">
+      <DependentUpon>frmCamposClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposClasificacionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposClasificacionEdit.Designer.cs">
+      <DependentUpon>frmCamposClasificacionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\frmConfigArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\frmConfigArbol.Designer.cs">
+      <DependentUpon>frmConfigArbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposTabla.Designer.cs">
+      <DependentUpon>frmCamposTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposTablaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCamposTablaEdit.Designer.cs">
+      <DependentUpon>frmCamposTablaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmFormularioEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmFormularioEdit.Designer.cs">
+      <DependentUpon>frmFormularioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmFormularios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmFormularios.Designer.cs">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmGrupoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmGrupoEdit.Designer.cs">
+      <DependentUpon>frmGrupoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmGrupos.Designer.cs">
+      <DependentUpon>frmGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmUsuarioEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmUsuarioEdit.Designer.cs">
+      <DependentUpon>frmUsuarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxErrorOutput.cs" />
+    <Compile Include="Procesos\frmArchivoGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmArchivoGeneral.Designer.cs">
+      <DependentUpon>frmArchivoGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmDigitalizarDocto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmDigitalizarDocto.Designer.cs">
+      <DependentUpon>frmDigitalizarDocto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmDigitalizarExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmDigitalizarExp.Designer.cs">
+      <DependentUpon>frmDigitalizarExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmVisualizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmVisualizador.Designer.cs">
+      <DependentUpon>frmVisualizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\ScanPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\ScanPreview.Designer.cs">
+      <DependentUpon>ScanPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\frmCargar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmCargar.Designer.cs">
+      <DependentUpon>frmCargar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmGuardar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmGuardar.Designer.cs">
+      <DependentUpon>frmGuardar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmNewCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmNewCategoria.Designer.cs">
+      <DependentUpon>frmNewCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReportDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReportDesign.Designer.cs">
+      <DependentUpon>frmReportDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionExtensions.cs" />
+    <Compile Include="ExtendedScanSettings.cs" />
+    <Compile Include="Reportes\frmViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmViewReport.Designer.cs">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scan\Images\BitmapHelper.cs" />
+    <Compile Include="Scan\Images\IScannedImage.cs" />
+    <Compile Include="Scan\Images\ScannedImage.cs" />
+    <Compile Include="Scan\Images\ScannedImageHelper.cs" />
+    <Compile Include="Scan\Images\ScannedImageList.cs" />
+    <Compile Include="Scan\Images\ThumbnailHelper.cs" />
+    <Compile Include="Scan\Images\Transforms\BrightnessTransform.cs" />
+    <Compile Include="Scan\Images\Transforms\ContrastTransform.cs" />
+    <Compile Include="Scan\Images\Transforms\CropTransform.cs" />
+    <Compile Include="Scan\Images\Transforms\RotationTransform.cs" />
+    <Compile Include="Scan\Images\Transforms\Transform.cs" />
+    <Compile Include="Service References\WSD2014\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controles\frmBusqueda.resx">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\frmGauge.resx">
+      <DependentUpon>frmGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\jpgViewer.resx">
+      <DependentUpon>jpgViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\jpgViewerCtl.resx">
+      <DependentUpon>jpgViewerCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\PageViewer.resx">
+      <DependentUpon>PageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ThumbnailList.resx">
+      <DependentUpon>ThumbnailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBases\frmCatalogos.resx">
+      <DependentUpon>frmCatalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBases\frmGeneral01.resx">
+      <DependentUpon>frmGeneral01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmAgregarCampo.resx">
+      <DependentUpon>frmAgregarCampo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmAgregarGrupo.resx">
+      <DependentUpon>frmAgregarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmAgregarNodo.resx">
+      <DependentUpon>frmAgregarNodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCampoEdit.resx">
+      <DependentUpon>frmCampoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCampos.resx">
+      <DependentUpon>frmCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCamposClasificacion.resx">
+      <DependentUpon>frmCamposClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCamposClasificacionEdit.resx">
+      <DependentUpon>frmCamposClasificacionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\frmConfigArbol.resx">
+      <DependentUpon>frmConfigArbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCamposTabla.resx">
+      <DependentUpon>frmCamposTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCamposTablaEdit.resx">
+      <DependentUpon>frmCamposTablaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmFormularioEdit.resx">
+      <DependentUpon>frmFormularioEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmFormularios.resx">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmGrupoEdit.resx">
+      <DependentUpon>frmGrupoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmGrupos.resx">
+      <DependentUpon>frmGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmUsuarioEdit.resx">
+      <DependentUpon>frmUsuarioEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmArchivoGeneral.resx">
+      <DependentUpon>frmArchivoGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmDigitalizarDocto.resx">
+      <DependentUpon>frmDigitalizarDocto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmDigitalizarExp.resx">
+      <DependentUpon>frmDigitalizarExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmVisualizador.resx">
+      <DependentUpon>frmVisualizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\ScanPreview.resx">
+      <DependentUpon>ScanPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\frmReportDesign.resx">
+      <DependentUpon>frmReportDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmViewReport.resx">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Digitalizacion2014_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WSD2014\Digitalizacion2014.WSD2014.cRetorno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSD2014\WSDatos.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Interop.WIA.dll" />
+    <None Include="Resources\IconPdf.png" />
+    <None Include="Resources\IconXLS.png" />
+    <None Include="Resources\tshadowdown.png" />
+    <None Include="Resources\tshadowdownleft.png" />
+    <None Include="Resources\tshadowdownright.png" />
+    <None Include="Resources\tshadowright.png" />
+    <None Include="Resources\tshadowtopright.png" />
+    <Content Include="Scanner.ico" />
+    <None Include="Service References\WSD2014\WSDatos.disco" />
+    <None Include="Service References\WSD2014\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WSD2014\configuration.svcinfo" />
+    <None Include="Service References\WSD2014\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PropertyGridEx\PropertyGridEx.csproj">
+      <Project>{B0BB47F2-21C4-41FC-B6E6-40757ADFC4A1}</Project>
+      <Name>PropertyGridEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ribbon35\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon35.csproj">
+      <Project>{46A18A55-5AE8-49CE-91CD-C7421B642E7E}</Project>
+      <Name>System.Windows.Forms.Ribbon35</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSD2014\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
