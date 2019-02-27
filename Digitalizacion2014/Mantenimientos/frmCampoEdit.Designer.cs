@@ -42,6 +42,7 @@
             this.iTXTExplicacion = new Digitalizacion2014.Controles.InnovaTXT();
             this.iTXTDescripcion = new Digitalizacion2014.Controles.InnovaTXT();
             this.btnEditTable = new System.Windows.Forms.Button();
+            this.chkObligatorio = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,11 +206,23 @@
             this.btnEditTable.Visible = false;
             this.btnEditTable.Click += new System.EventHandler(this.btnEditTable_Click);
             // 
+            // chkObligatorio
+            // 
+            this.chkObligatorio.AutoSize = true;
+            this.chkObligatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkObligatorio.Location = new System.Drawing.Point(300, 189);
+            this.chkObligatorio.Name = "chkObligatorio";
+            this.chkObligatorio.Size = new System.Drawing.Size(107, 22);
+            this.chkObligatorio.TabIndex = 15;
+            this.chkObligatorio.Text = "Obligatorio?";
+            this.chkObligatorio.UseVisualStyleBackColor = true;
+            // 
             // frmCampoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 255);
+            this.Controls.Add(this.chkObligatorio);
             this.Controls.Add(this.btnEditTable);
             this.Controls.Add(this.cboClasificacionCampos);
             this.Controls.Add(this.label5);
@@ -252,5 +265,6 @@
         private System.Windows.Forms.ComboBox cboClasificacionCampos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEditTable;
+        private System.Windows.Forms.CheckBox chkObligatorio;
     }
 }

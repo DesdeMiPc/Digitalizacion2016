@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDigitalizarExp));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Licencia",
             "2"}, -1);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +45,8 @@
             this.TabWizard = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupExpediente = new System.Windows.Forms.GroupBox();
+            this.PGExpediente = new PropertyGridEx.PropertyGridEx();
+            this.iTXTidUnico = new Digitalizacion2014.Controles.InnovaTXT();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAllSettings = new System.Windows.Forms.Button();
@@ -71,15 +73,15 @@
             this.cboZoom = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tvTiposDocumentos = new System.Windows.Forms.TreeView();
+            this.tblImagenes = new Digitalizacion2014.Controles.ThumbnailList();
             this.CMSOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desdeJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desdePDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDigitalizar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.PGExpediente = new PropertyGridEx.PropertyGridEx();
-            this.iTXTidUnico = new Digitalizacion2014.Controles.InnovaTXT();
-            this.tblImagenes = new Digitalizacion2014.Controles.ThumbnailList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -269,6 +271,77 @@
             this.groupExpediente.TabStop = false;
             this.groupExpediente.Text = "Datos de Expediente";
             // 
+            // PGExpediente
+            // 
+            this.PGExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PGExpediente.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            // 
+            // 
+            // 
+            this.PGExpediente.DocCommentDescription.AutoEllipsis = true;
+            this.PGExpediente.DocCommentDescription.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PGExpediente.DocCommentDescription.Location = new System.Drawing.Point(3, 18);
+            this.PGExpediente.DocCommentDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.PGExpediente.DocCommentDescription.Name = "";
+            this.PGExpediente.DocCommentDescription.Size = new System.Drawing.Size(287, 37);
+            this.PGExpediente.DocCommentDescription.TabIndex = 1;
+            this.PGExpediente.DocCommentImage = null;
+            // 
+            // 
+            // 
+            this.PGExpediente.DocCommentTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PGExpediente.DocCommentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.PGExpediente.DocCommentTitle.Location = new System.Drawing.Point(3, 3);
+            this.PGExpediente.DocCommentTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.PGExpediente.DocCommentTitle.Name = "";
+            this.PGExpediente.DocCommentTitle.Size = new System.Drawing.Size(287, 15);
+            this.PGExpediente.DocCommentTitle.TabIndex = 0;
+            this.PGExpediente.DocCommentTitle.UseMnemonic = false;
+            this.PGExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PGExpediente.Location = new System.Drawing.Point(118, 68);
+            this.PGExpediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PGExpediente.Name = "PGExpediente";
+            this.PGExpediente.Size = new System.Drawing.Size(293, 238);
+            this.PGExpediente.TabIndex = 1;
+            // 
+            // 
+            // 
+            this.PGExpediente.ToolStrip.AccessibleName = "Barra de herramientas";
+            this.PGExpediente.ToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.PGExpediente.ToolStrip.AllowMerge = false;
+            this.PGExpediente.ToolStrip.AutoSize = false;
+            this.PGExpediente.ToolStrip.CanOverflow = false;
+            this.PGExpediente.ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.PGExpediente.ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.PGExpediente.ToolStrip.Location = new System.Drawing.Point(0, 1);
+            this.PGExpediente.ToolStrip.Name = "";
+            this.PGExpediente.ToolStrip.Padding = new System.Windows.Forms.Padding(4, 0, 3, 0);
+            this.PGExpediente.ToolStrip.Size = new System.Drawing.Size(293, 25);
+            this.PGExpediente.ToolStrip.TabIndex = 1;
+            this.PGExpediente.ToolStrip.TabStop = true;
+            this.PGExpediente.ToolStrip.Text = "PropertyGridToolBar";
+            // 
+            // iTXTidUnico
+            // 
+            this.iTXTidUnico.ActivarAyuda = false;
+            this.iTXTidUnico.ActivarEnter = false;
+            this.iTXTidUnico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iTXTidUnico.BackColorFocus = System.Drawing.Color.Yellow;
+            this.iTXTidUnico.Catalogo = "";
+            this.iTXTidUnico.colTexto = 0;
+            this.iTXTidUnico.ControlDestinoDescripcion = null;
+            this.iTXTidUnico.IsNumeric = false;
+            this.iTXTidUnico.Location = new System.Drawing.Point(118, 35);
+            this.iTXTidUnico.Name = "iTXTidUnico";
+            this.iTXTidUnico.Size = new System.Drawing.Size(293, 26);
+            this.iTXTidUnico.TabIndex = 0;
+            this.iTXTidUnico.TeclaAyudaCatalogo = System.Windows.Forms.Keys.F2;
+            this.iTXTidUnico.TextChanged += new System.EventHandler(this.iTXTidUnico_TextChanged);
+            this.iTXTidUnico.Leave += new System.EventHandler(this.iTXTidUnico_Leave);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -450,9 +523,9 @@
             this.columnHeader2});
             this.lvDocumentos.FullRowSelect = true;
             this.lvDocumentos.GridLines = true;
-            listViewItem2.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.lvDocumentos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.lvDocumentos.LabelEdit = true;
             this.lvDocumentos.Location = new System.Drawing.Point(8, 59);
             this.lvDocumentos.Name = "lvDocumentos";
@@ -592,6 +665,24 @@
             this.tvTiposDocumentos.TabIndex = 2;
             this.tvTiposDocumentos.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvTiposDocumentos_AfterSelect);
             // 
+            // tblImagenes
+            // 
+            this.tblImagenes.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tblImagenes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tblImagenes.ContextMenuStrip = this.CMSOpciones;
+            this.tblImagenes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblImagenes.HideSelection = false;
+            this.tblImagenes.Location = new System.Drawing.Point(0, 0);
+            this.tblImagenes.Name = "tblImagenes";
+            this.tblImagenes.Size = new System.Drawing.Size(416, 324);
+            this.tblImagenes.TabIndex = 0;
+            this.tblImagenes.UseCompatibleStateImageBehavior = false;
+            this.tblImagenes.ItemActivate += new System.EventHandler(this.tblImagenes_ItemActivate);
+            this.tblImagenes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tblImagenes_KeyDown);
+            this.tblImagenes.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tblImagenes_KeyUp);
+            this.tblImagenes.MouseLeave += new System.EventHandler(this.tblImagenes_MouseLeave);
+            this.tblImagenes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tblImagenes_MouseMove);
+            // 
             // CMSOpciones
             // 
             this.CMSOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -602,11 +693,29 @@
             // 
             // importarToolStripMenuItem
             // 
+            this.importarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.desdeJPGToolStripMenuItem,
+            this.desdePDFToolStripMenuItem});
             this.importarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("importarToolStripMenuItem.Image")));
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
             this.importarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.importarToolStripMenuItem.Text = "Importar";
-            this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
+            // 
+            // desdeJPGToolStripMenuItem
+            // 
+            this.desdeJPGToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("desdeJPGToolStripMenuItem.Image")));
+            this.desdeJPGToolStripMenuItem.Name = "desdeJPGToolStripMenuItem";
+            this.desdeJPGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.desdeJPGToolStripMenuItem.Text = "Desde JPG";
+            this.desdeJPGToolStripMenuItem.Click += new System.EventHandler(this.desdeJPGToolStripMenuItem_Click);
+            // 
+            // desdePDFToolStripMenuItem
+            // 
+            this.desdePDFToolStripMenuItem.Image = global::Digitalizacion2014.Properties.Resources.IconPdf;
+            this.desdePDFToolStripMenuItem.Name = "desdePDFToolStripMenuItem";
+            this.desdePDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.desdePDFToolStripMenuItem.Text = "Desde PDF";
+            this.desdePDFToolStripMenuItem.Click += new System.EventHandler(this.desdePDFToolStripMenuItem_Click);
             // 
             // ScannerToolStripMenuItem
             // 
@@ -649,95 +758,6 @@
             this.label4.Size = new System.Drawing.Size(211, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Proceso de Digitalización";
-            // 
-            // PGExpediente
-            // 
-            this.PGExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PGExpediente.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            // 
-            // 
-            // 
-            this.PGExpediente.DocCommentDescription.AutoEllipsis = true;
-            this.PGExpediente.DocCommentDescription.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PGExpediente.DocCommentDescription.Location = new System.Drawing.Point(3, 18);
-            this.PGExpediente.DocCommentDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.PGExpediente.DocCommentDescription.Name = "";
-            this.PGExpediente.DocCommentDescription.Size = new System.Drawing.Size(287, 37);
-            this.PGExpediente.DocCommentDescription.TabIndex = 1;
-            this.PGExpediente.DocCommentImage = null;
-            // 
-            // 
-            // 
-            this.PGExpediente.DocCommentTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PGExpediente.DocCommentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.PGExpediente.DocCommentTitle.Location = new System.Drawing.Point(3, 3);
-            this.PGExpediente.DocCommentTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.PGExpediente.DocCommentTitle.Name = "";
-            this.PGExpediente.DocCommentTitle.Size = new System.Drawing.Size(287, 15);
-            this.PGExpediente.DocCommentTitle.TabIndex = 0;
-            this.PGExpediente.DocCommentTitle.UseMnemonic = false;
-            this.PGExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PGExpediente.Location = new System.Drawing.Point(118, 68);
-            this.PGExpediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PGExpediente.Name = "PGExpediente";
-            this.PGExpediente.Size = new System.Drawing.Size(293, 238);
-            this.PGExpediente.TabIndex = 1;
-            // 
-            // 
-            // 
-            this.PGExpediente.ToolStrip.AccessibleName = "Barra de herramientas";
-            this.PGExpediente.ToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
-            this.PGExpediente.ToolStrip.AllowMerge = false;
-            this.PGExpediente.ToolStrip.AutoSize = false;
-            this.PGExpediente.ToolStrip.CanOverflow = false;
-            this.PGExpediente.ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.PGExpediente.ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.PGExpediente.ToolStrip.Location = new System.Drawing.Point(0, 1);
-            this.PGExpediente.ToolStrip.Name = "";
-            this.PGExpediente.ToolStrip.Padding = new System.Windows.Forms.Padding(4, 0, 3, 0);
-            this.PGExpediente.ToolStrip.Size = new System.Drawing.Size(293, 25);
-            this.PGExpediente.ToolStrip.TabIndex = 1;
-            this.PGExpediente.ToolStrip.TabStop = true;
-            this.PGExpediente.ToolStrip.Text = "PropertyGridToolBar";
-            // 
-            // iTXTidUnico
-            // 
-            this.iTXTidUnico.ActivarAyuda = false;
-            this.iTXTidUnico.ActivarEnter = false;
-            this.iTXTidUnico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iTXTidUnico.BackColorFocus = System.Drawing.Color.Yellow;
-            this.iTXTidUnico.Catalogo = "";
-            this.iTXTidUnico.colTexto = 0;
-            this.iTXTidUnico.ControlDestinoDescripcion = null;
-            this.iTXTidUnico.IsNumeric = false;
-            this.iTXTidUnico.Location = new System.Drawing.Point(118, 35);
-            this.iTXTidUnico.Name = "iTXTidUnico";
-            this.iTXTidUnico.Size = new System.Drawing.Size(293, 26);
-            this.iTXTidUnico.TabIndex = 0;
-            this.iTXTidUnico.TeclaAyudaCatalogo = System.Windows.Forms.Keys.F2;
-            this.iTXTidUnico.TextChanged += new System.EventHandler(this.iTXTidUnico_TextChanged);
-            this.iTXTidUnico.Leave += new System.EventHandler(this.iTXTidUnico_Leave);
-            // 
-            // tblImagenes
-            // 
-            this.tblImagenes.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tblImagenes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tblImagenes.ContextMenuStrip = this.CMSOpciones;
-            this.tblImagenes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblImagenes.HideSelection = false;
-            this.tblImagenes.Location = new System.Drawing.Point(0, 0);
-            this.tblImagenes.Name = "tblImagenes";
-            this.tblImagenes.Size = new System.Drawing.Size(416, 324);
-            this.tblImagenes.TabIndex = 0;
-            this.tblImagenes.UseCompatibleStateImageBehavior = false;
-            this.tblImagenes.ItemActivate += new System.EventHandler(this.tblImagenes_ItemActivate);
-            this.tblImagenes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tblImagenes_KeyDown);
-            this.tblImagenes.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tblImagenes_KeyUp);
-            this.tblImagenes.MouseLeave += new System.EventHandler(this.tblImagenes_MouseLeave);
-            this.tblImagenes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tblImagenes_MouseMove);
             // 
             // frmDigitalizarExp
             // 
@@ -830,5 +850,7 @@
         private System.Windows.Forms.ContextMenuStrip CMSOpciones;
         private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ScannerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desdeJPGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desdePDFToolStripMenuItem;
     }
 }

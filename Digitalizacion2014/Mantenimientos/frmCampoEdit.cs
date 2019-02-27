@@ -68,6 +68,7 @@ namespace Digitalizacion2014.Mantenimientos
             this.cboTiposCampos.SelectedValue = campo.tipoCampo.id;
             this.cboClasificacionCampos.SelectedValue = campo.clasificacion.id;
             this.numericUpDown1.Value = campo.longitud;
+            this.chkObligatorio.Checked = campo.obligatorio;
 
             this.iTXTDescripcion.Focus();
         }
@@ -99,6 +100,7 @@ namespace Digitalizacion2014.Mantenimientos
             campo.tipoCampo.id = cboTiposCampos.SelectedValue.ToString();
             campo.clasificacion.id = cboClasificacionCampos.SelectedValue.ToString();
             campo.longitud = Convert.ToInt16(numericUpDown1.Value);
+            campo.obligatorio = chkObligatorio.Checked;
 
             //Guardar Datos en el Server
             if (!this.campo.guardarDatos(Clases.vGlobales.id_User))

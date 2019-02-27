@@ -592,6 +592,6 @@
         private System.Windows.Forms.StatusStrip SSGeneral;
         private System.Windows.Forms.ToolStripStatusLabel SSLUsuario;
         private System.Windows.Forms.ToolStripStatusLabel SSLDataBase;
-        private System.Windows.Forms.ToolStripProgressBar TSPBGeneral;
+        public System.Windows.Forms.ToolStripProgressBar TSPBGeneral;
     }
 }

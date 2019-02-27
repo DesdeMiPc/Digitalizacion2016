@@ -13,9 +13,12 @@ namespace Digitalizacion2014
 {
     public partial class frmPrincipal : RibbonForm
     {
+        public static frmPrincipal Instance;
+
         public frmPrincipal()
         {
             InitializeComponent();
+            frmPrincipal.Instance = this;
         }
 
         private void cmdGrupos_Click(object sender, EventArgs e)

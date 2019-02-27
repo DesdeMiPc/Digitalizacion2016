@@ -1038,11 +1038,6 @@ namespace Digitalizacion2014.Procesos
             //}
         }
 
-        private void importarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Import();
-        }
-
         #region Importar
         private void Import()
         {
@@ -1132,5 +1127,57 @@ namespace Digitalizacion2014.Procesos
             //MessageBox.Show("Paro");
         }
 
+        private void desdeJPGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Import();
+        }
+
+        private void desdePDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog
+            {
+                Multiselect = false,
+                CheckFileExists = true,
+                DefaultExt = "pdf",
+                Filter = "Archivos PDF (*.pdf)|*.pdf",
+                Title = "Abrir Archvivo PDF"
+            };
+
+            if (ofd.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+
+            frmPreview = new ScanPreview();
+            frmPreview.StartPosition = FormStartPosition.CenterScreen;
+            frmPreview.tblPreview.changeSizeThumb(new Size(96, 96));
+            frmPreview.Show();
+
+            PdfiumViewer.IPdfDocument documento;
+
+            documento = PdfiumViewer.PdfDocument.Load(ofd.FileName);
+
+            frmPrincipal.Instance.TSPBGeneral.Visible = true;
+
+            for (int i = 0; i < documento.PageCount; i++)
+            {
+                using (var image = documento.Render(i, (int)(documento.PageSizes[i].Width*2.5), (int)(documento.PageSizes[i].Height*2.5), 150, 150, true))
+                {
+                    Scan.Images.IScannedImage imagen1 = new Scan.Images.ScannedImage(new Bitmap(image), ScanBitDepth.C24Bit, false);
+                    imagenesCapturadas[iActualTipoDocumento].Images.Add(imagen1);
+                    frmPreview.tblPreview.AppendImage(imagen1);
+                    Application.DoEvents();
+                }
+            }
+
+            tblImagenes.UpdateImages(imagenesCapturadas[iActualTipoDocumento].Images);
+            frmPrincipal.Instance.TSPBGeneral.Visible = false;
+
+            if (frmPreview != null)
+            {
+                frmPreview.Close();
+                frmPreview.Dispose();
+            }
+        }
     }
 }

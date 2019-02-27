@@ -16,6 +16,10 @@ namespace Digitalizacion2014.Clases
 {
     public class clsPDFExport
     {
+        private const string Autor = "Junta Municipal de Agua Potable y Alcantarillado de Culiacán";
+        private const string Subject = "Sistema de Digitalización de Documentos V 2.0";
+        private const string Creador = "Digitalización 2016, v 2.0";
+
         public bool Exportar(string archivo, List<IScannedImage> images)
         {
 
@@ -28,9 +32,10 @@ namespace Digitalizacion2014.Clases
 
             var documento = new PdfDocument { PageLayout = PdfPageLayout.SinglePage };
 
-            documento.Info.Author = "Junta Municipal de Agua Potable y Alcantarillado de Culiacán";
-            documento.Info.Creator = "Digitalización 2016, v 2.0";
-            documento.Info.Title = "Documentos Digitalizados";
+            documento.Info.Author = Autor;
+            documento.Info.Subject = Subject;
+            documento.Info.Creator = Creador;
+
 
             foreach (IScannedImage scannedImage in images)
             {
@@ -79,9 +84,10 @@ namespace Digitalizacion2014.Clases
 
             var documento = new PdfDocument { PageLayout = PdfPageLayout.SinglePage };
 
-            documento.Info.Author = "Junta Municipal de Agua Potable y Alcantarillado de Culiacán";
-            documento.Info.Creator = "Digitalización 2016, v 2.0";
-            documento.Info.Title = "Documentos Digitalizados";
+            documento.Info.Author = Autor;
+            documento.Info.Subject = Subject;
+            documento.Info.Creator = Creador;
+
 
             foreach (DataRow scannedImage in images.Rows)
             {
@@ -125,10 +131,24 @@ namespace Digitalizacion2014.Clases
             gauge.BringToFront();
 
             var documento = new PdfDocument { PageLayout = PdfPageLayout.SinglePage };
-            documento.Info.Author = "Junta Municipal de Agua Potable y Alcantarillado de Culiacán";
-            documento.Info.Creator = "Digitalización 2016, v 2.0";
-            documento.Info.Title = "Poliza de Expediente";
-            
+            documento.Info.Author = Autor;
+            documento.Info.Subject = Subject;
+            documento.Info.Creator = Creador;
+            documento.Info.Title = "Poliza JAPAC - " + idExpediente;
+
+            // Opciones de Seguridad
+            documento.SecuritySettings.DocumentSecurityLevel = PdfDocumentSecurityLevel.Encrypted128Bit;
+            //documento.SecuritySettings.UserPassword = "japac2019$";
+            documento.SecuritySettings.OwnerPassword = "JAPAC2019$";
+
+            documento.SecuritySettings.PermitExtractContent = false;
+            documento.SecuritySettings.PermitAccessibilityExtractContent = false;
+            documento.SecuritySettings.PermitAnnotations = false;
+            documento.SecuritySettings.PermitAssembleDocument = false;
+            documento.SecuritySettings.PermitFormsFill = false;
+            documento.SecuritySettings.PermitFullQualityPrint = false;
+            documento.SecuritySettings.PermitModifyDocument = false;
+            documento.SecuritySettings.PermitPrint = false;
 
             string parametros;
             string validar;

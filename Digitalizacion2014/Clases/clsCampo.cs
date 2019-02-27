@@ -26,6 +26,7 @@ namespace Digitalizacion2014.Clases
         public string campo_Valor { get; set; }
         public string campo_Mostrar { get; set; }
         public string consulta { get; set; }
+        public bool obligatorio { get; set; }
 
         public string id
         {
@@ -77,6 +78,7 @@ namespace Digitalizacion2014.Clases
                 this.campo_Valor = "";
                 this.campo_Mostrar = "";
                 this.consulta = "";
+                this.obligatorio = false;
             }
             else
             {
@@ -109,6 +111,7 @@ namespace Digitalizacion2014.Clases
                 this.campo_Valor = r["Campo_Valor"].ToString();
                 this.campo_Mostrar = r["Campo_Mostrar"].ToString();
                 this.consulta = r["Consulta"].ToString();
+                this.obligatorio = Convert.ToBoolean(r["Obligatorio"].ToString());
 
                 //Datos Comunes de Registros
                 this.CargarDatosRegistro(r);
@@ -123,11 +126,12 @@ namespace Digitalizacion2014.Clases
         {
             //Preparar Datos de Envio a SQL Server
             this.validar = "4";
-            this.parametros = "|V1=" + this._id + "|V2=" + this.descripcion + "|V3=" + this.explicacion + 
+            this.parametros = "|V1=" + this._id + "|V2=" + this.descripcion + "|V3=" + this.explicacion +
                               "|V4=" + this.tipoCampo.id + "|V5=" + this.clasificacion.id +
-                              "|V6=" + this.longitud+ "|V7=" + this.campo_Valor + 
-                              "|V8=" + this.campo_Valor + 
+                              "|V6=" + this.longitud + "|V7=" + this.campo_Valor +
+                              "|V8=" + this.campo_Valor +
                               "|V9=" + this.consulta +
+                              "|V10=" + this.obligatorio.ToString() +
                               "|C1=" + user.ToString() +
                               "|C3=" + Environment.UserName.ToString() + "/" + Environment.MachineName.ToString() + "|";
 
